@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Maize and Blue Cupboard</title>
 </head>
 <body>
-    <a href = "#main">Skip to Main Content</a>
+    <a id="skip" href = "#main">Skip to Main Content</a>
     <header>
         <nav>
-            <img src="images/Block_M-Hex.jpg" alt="University of Michigan 'M' Logo">
+            <a href="index.html"><img class="nav-logo" src="images/Block_M-Hex.jpg" alt="University of Michigan 'M' Logo"></a>
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
@@ -29,18 +31,20 @@
 
             <section>
                 <h3>What we provide</h3>
-                <table>
-                    <tr>
-                        <th>Food</th>
-                        <th>Kitchen & Cooking</th>
-                        <th>Personal & Household</th>
-                    </tr>
-                    <tr>
-                        <td>Produce, dairy, meat, bread, frozen and shelf-stable foods (i.e. rice, cans, tuna, etc.)</td>
-                        <td>Dishes, silverware, pots & pans, Tupperware, cutting boards, knives, and other kitchenware</td>
-                        <td>Trash bags, toilet paper, cleaning supplies, hygiene products, school supplies, baby items and more</td>
-                    </tr>
-                </table>
+                <div class="food-pantry-grid">
+                    <div class="food-col-1">
+                        <h4>Food</h4>
+                        <p>Produce, dairy, meat, bread, frozen and shelf-stable foods (i.e. rice, cans, tuna, etc.)</p>
+                    </div>
+                    <div class="food-col-2"></div>
+                        <h4>Kitchen & Cooking</h4>
+                        <p>Dishes, silverware, pots & pans, Tupperware, cutting boards, knives, and other kitchenware</p>
+                    </div>
+                    <div class="food-col-3"></div>
+                        <h4>Personal & Household</h4>
+                        <p>Trash bags, toilet paper, cleaning supplies, hygiene products, school supplies, baby items and more</p>
+                    </div>
+                </div>
             </section>
 
             <section>
