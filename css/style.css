@@ -1,20 +1,24 @@
 body{
     /* background-color: #00274C; */
     color: #000000;
-    font-family: Helvetica, sans-serif;;
+    font-family: Helvetica, sans-serif;
 }
 
 h1{
-    font-size: 48px;
+    font-size: 36px;
     font-family: Helvetica, sans-serif;
     text-align: center;
     font-weight: bold;
+    margin: 16px;
+    padding: 0 16px;
+    color: #00274C;
 }
 
 h2{
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: 500;
     font-family: Helvetica, sans-serif;
-    color: #FFCB05;
+    color: #00274C;
 }
 
 h3{
@@ -27,37 +31,64 @@ p{
     line-height: 25px;
 }
 
+a{
+    text-decoration: underline;
+}
+
 img {
-    border: 5px solid #ffffff;
     padding: 10px;
     /* margin: 20px; */
 }
 
 main{
     margin: 24px;
+    display: grid;
 }
+
+/* body{
+    background: rgb(0,39,76);
+    background: linear-gradient(0deg, rgba(0,39,76,1) 0%, rgba(255,255,255,1) 10%);
+} */
 
 nav{
     display: grid;
 }
 
-nav li{
+nav a{
+    display: grid;
+    text-decoration: none;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+nav ul li{
+    grid-column: 1 / -1;
     margin: 2px 5px;
     padding: 10px;
     color: #ffffff;
     font-size: 24px;
+    font-weight: 550;
     border: #ffffff solid 1px;
     border-radius: 5px;
     background-color: #00274C;
 }
 
-nav li a:active{
-    color: ;
+.nav-logo{
+    max-width: 15%;
+    justify-self: center;
+    margin: 6px;
 }
 
-.nav-logo{
-    max-width: 20%;
-    /* justify-self: center; */
+nav li:hover{
+    text-decoration: underline #ffffff;
+}
+
+.active{
+    background-color: #2F65A7;
+    text-decoration: underline #ffffff;
 }
 
 #skip{
@@ -71,5 +102,70 @@ nav li a:active{
     border: #FFCB05 solid 3px;
     background-color: #ffffff;
 }
+
+footer{
+    background-color: #00274C;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 25% auto;
+    padding: 8px;
+}
+
+footer img{
+    max-width: 100%;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 16px 0;
+}
+
+.welcome{
+    grid-column: 1 / -1;
+    background-color: #FFCB05;
+    padding: 16px;
+    border-radius: 25px 0 25px 0 ;
+    margin: 0 0 16px 0;
+}
+
+/* does this select p and ol in welc class */
+.welcome h2, p, ol{
+    padding: 8px 0;
+}
+
+.welcome ol{
+    /* text-indent: 5%; */
+    position: relative;
+    left: 5%;
+}
+
+.welcome li{
+    display: list-item;
+    list-style-type: circle;
+}
+
+.index-wellness, .index-study, .index-food{
+    grid-column: 1 / -1;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 1em 0.1em #CFC096;
+}
+
+.index-wellness:active, .index-study:active, .index-food:active{
+    grid-column: 1 / -1;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #FFCB05;
+    box-shadow: 0 0 1em 0.1em #CFC096;
+}
+
+#index-html{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 25%, rgba(252,251,248,1) 26%, rgba(207,192,144,1) 89%);
+}
+
+
 
 
