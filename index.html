@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Student Success Portal</title>
 </head>
-<body>
+<body id="index-html">
     <a id="skip" href = "#main">Skip to Main Content</a>
     <header>
         <nav>
             <a href="index.html"><img class="nav-logo" src="images/Block_M-Hex.jpg" alt="University of Michigan 'M' Logo"></a>
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "caps.html">CAPS</a></li>
+                <li class="active"><a href = "index.html">Home</a></li>
+                <li><a href="caps.html">CAPS</a></li>
                 <li><a href="study_spaces.html">Study Spaces</a></li>
                 <li><a href="food_pantry.html">Food Pantry</a></li>
             </ul>
@@ -23,29 +23,29 @@
 
     </header>
     <main id="main">
-        <section>
+        <section class="welcome">
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p>Your Comprehensive Guide to Resources for Graduate School Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
             <ol>
-                <li>Mental health services</li>
-                <li>Where to study on campus</li>
-                <li>Resources for essential food and goods</li>
+                <li><a href="#wellness">Mental health services</a></li>
+                <li><a href="#study">Where to study on campus</a></li>
+                <li><a href="#food">Resources for essential food and goods</a></li>
             </ol>
         </section>
 
-        <section>
-            <h2>Mental health services</h2>
+        <section class="index-wellness" id="wellness">
+            <h2><a href="caps.html">Mental health services</a></h2>
             <p>As a student at University of Michigan, you can get access to mental health services through CAPS (Counseling and Psychological Services). Whether you need immediate, emergency help or seek general counseling, CAPS has options for you.</p>
         </section>
 
-        <section>
-            <h2>Where to study on campus</h2>
+        <section class="index-study" id="study">
+            <h2><a href="study_spaces.html">Where to study on campus</a></h2>
             <p>Overwhelmed with the number of buildings on campus? We have you covered with options for quiet studying alone, collaborative sessions, and reserving rooms to make sure you have a seat!</p>
         </section>
 
-        <section>
-            <h2>Resources for essential food and goods</h2>
+        <section class="index-food" id="food">
+            <h2><a href="food_pantry.html">Resources for essential food and goods</a></h2>
             <p>The university Maize & Blue Cupboard provides equitable access to food and daily necessities. Learn more about how to get access to the pantry, donate excess goods, or volunteer your time on the corresponding page.</p>
         </section>
 
