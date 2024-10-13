@@ -8,7 +8,7 @@ h1{
     font-size: 36px;
     font-family: Helvetica, sans-serif;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     margin: 16px;
     padding: 0 16px;
     color: #00274C;
@@ -16,7 +16,7 @@ h1{
 
 h2{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: Helvetica, sans-serif;
     color: #00274C;
 }
@@ -24,11 +24,17 @@ h2{
 h3{
     font-size: 24px;
     font-family: Helvetica, sans-serif;
-    color: #CFC096;
+    color: #00274C;
+    font-weight: 600;
+}
+
+h4{
+    line-height: 24px;
+    font-weight: 600;
 }
 
 p{
-    line-height: 25px;
+    line-height: 24px;
 }
 
 a{
@@ -36,8 +42,7 @@ a{
 }
 
 img {
-    padding: 10px;
-    /* margin: 20px; */
+    padding: 3% 0;
 }
 
 main{
@@ -82,7 +87,7 @@ nav ul li{
     margin: 6px;
 }
 
-nav li:hover{
+nav li:active{
     text-decoration: underline #ffffff;
 }
 
@@ -121,7 +126,14 @@ section{
     margin: 16px 0;
 }
 
-.welcome{
+main>section{
+    grid-column: 1 / -1;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+main>section:first-child{
     grid-column: 1 / -1;
     background-color: #FFCB05;
     padding: 16px;
@@ -130,8 +142,12 @@ section{
 }
 
 /* does this select p and ol in welc class */
-.welcome h2, p, ol{
+h2, p, ol{
     padding: 8px 0;
+}
+
+.index-section{
+    box-shadow: 0 0 1em 0.1em rgba(155, 154, 109, 0.25);
 }
 
 .welcome ol{
@@ -145,27 +161,112 @@ section{
     list-style-type: circle;
 }
 
-.index-wellness, .index-study, .index-food{
-    grid-column: 1 / -1;
-    padding: 16px;
-    border-radius: 20px;
+.provide-grid{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 3% 0;
+}
+
+hr{
+    display: block;
+    height: 0.5em;
+    border: 0;
+    border-top: 2px solid #00B2A9;
+    margin: 0.5em 8em;
+    padding: 0;
+}
+
+.food-col-1{
+    grid-row: 1 / span 1;
+}
+
+.food-col-2{
+    grid-row: 2 / span 1;
+}
+
+.food-col-3{
+    grid-row: 3 / span 1;
+}
+
+.visit-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
     background-color: #ffffff;
-    box-shadow: 0 0 1em 0.1em #CFC096;
+    box-shadow: 0 0 1em 0.1em rgba(0, 178, 169, 0.25);
 }
 
-.index-wellness:active, .index-study:active, .index-food:active{
+.visit-col-1{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 5%;
+}
+
+.visit-col-2{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    padding: 5%;
+}
+
+.button{
+  background-color: #00B2A9;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  transition: color 100ms;
+  margin: 10%;
+  font-weight: 550;
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.pantry-bold{
+    font-weight: 600;
+    color: #006b66;
+}
+
+.pantry-h3{
+    text-decoration: underline #00B2A9 3px;
+}
+
+.donating-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    gap: 2%;
+}
+
+.donating-grid h3{
     grid-column: 1 / -1;
-    padding: 16px;
-    border-radius: 20px;
-    background-color: #FFCB05;
-    box-shadow: 0 0 1em 0.1em #CFC096;
+    padding: 0 0 5% 0;
 }
 
-#index-html{
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 25%, rgba(252,251,248,1) 26%, rgba(207,192,144,1) 89%);
+.donating-col-1{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding: 2%;
 }
 
+.donating-col-1 img{
+    margin: 0;
+    padding: 0;
+}
 
+.donating-col-2{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding: 2%;
+}
 
-
+.donating-col-2 .button{
+    margin: 11%;
+}
