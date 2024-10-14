@@ -50,11 +50,6 @@ main{
     display: grid;
 }
 
-/* body{
-    background: rgb(0,39,76);
-    background: linear-gradient(0deg, rgba(0,39,76,1) 0%, rgba(255,255,255,1) 10%);
-} */
-
 nav{
     display: grid;
 }
@@ -234,9 +229,10 @@ hr{
     color: #006b66;
 }
 
-.pantry-h3{
+/* .pantry-h3{
     text-decoration: underline #00B2A9 3px;
-}
+    color: #00B2A9;
+} */
 
 .donating-grid{
     display: grid;
@@ -275,7 +271,7 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
-    gap: 3%;
+    gap: 2% 3%;
 }
 
 /* .services-grid h3{
@@ -310,4 +306,65 @@ hr{
 .services-grid .button{
     background-color: rgba(112, 32, 130, 1);
     color: #ffffff;
+    margin: 5%;
+}
+
+.services-wrap{
+    padding: 0;
+}
+
+.quiet-spaces, .collab-spaces{
+    display: grid;
+    grid-template-columns: 40% auto;
+    gap: 1em;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 1em 0.1em rgba(87, 82, 148, 0.25);
+    /* overflow-x: hidden; */
+}
+
+.quiet-spaces>h2, .collab-spaces>h2{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.quiet-spaces>h3, .collab-spaces>h3{
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #575294;
+}
+
+.quiet-spaces>h4, .collab-spaces>h4{
+    grid-column: 1 / 2;
+}
+
+.quiet-spaces>p, .collab-spaces>p{
+    grid-column: 2 / 3;
+}
+
+.quiet-spaces img, .collab-spaces img{
+    grid-column: 1 / -1;
+    max-width: 100%;
+}
+
+.study-bold{
+    color: #575294;
+    font-weight: 600;
+}
+
+.quiet-spaces span, .collab-spaces span{
+    font-weight: 300;
+}
+
+.reserved-spaces{
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 1em 0.1em rgba(87, 82, 148, 0.25);
+}
+
+.reserved-spaces>.button{
+    background-color: #575294;
+    color: #ffffff;
+    margin: 5%;
 }
