@@ -12,6 +12,7 @@ h1{
     margin: 16px;
     padding: 0 16px;
     color: #00274C;
+    padding: 0.5em;
 }
 
 h2{
@@ -77,9 +78,9 @@ nav ul li{
 }
 
 .nav-logo{
-    max-width: 15%;
+    max-width: 20%;
     justify-self: center;
-    margin: 6px;
+    margin: 1em;
 }
 
 nav li:active{
@@ -113,6 +114,17 @@ footer{
 
 footer img{
     max-width: 100%;
+    grid-column: 1 / 2;
+}
+
+footer div{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;;
+}
+
+.footer-p{
+    font-weight: 200;
+    padding-top: 0;
 }
 
 section{
@@ -156,6 +168,10 @@ h2, p, ol{
     list-style-type: circle;
 }
 
+header img{
+    padding: 0 1em;
+}
+
 .provide-grid{
     display: grid;
     grid-template-columns: auto;
@@ -189,12 +205,14 @@ hr{
     align-items: baseline;
     background-color: #ffffff;
     box-shadow: 0 0 1em 0.1em rgba(0, 178, 169, 0.25);
+    gap: 1em;
 }
 
 .visit-col-1{
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
-    padding: 5%;
+    padding: 5% 5%;
+    align-self: start;
 }
 
 .visit-col-2{
@@ -218,7 +236,6 @@ hr{
   position: relative;
   text-align: center;
   transition: color 100ms;
-  margin: 10%;
   font-weight: 550;
   font-weight: 550;
   text-decoration: none;
@@ -264,20 +281,20 @@ hr{
 }
 
 .donating-col-2 .button{
-    margin: 11%;
+    margin: 0.5em;
 }
 
 .services-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
-    gap: 2% 3%;
+    gap: 1em;
 }
 
-/* .services-grid h3{
+.services-grid img{
     grid-column: 1 / -1;
-    grid-row: 1 / 2;
-} */
+    max-width: 100%;
+}
 
 .services-col-1{
     grid-column: 1 / 2;
