@@ -92,6 +92,10 @@ nav li:active{
     text-decoration: underline #ffffff;
 }
 
+:focus{
+    outline: 3px solid;
+}
+
 #skip{
     position: absolute;
     top: -100px;
@@ -291,11 +295,6 @@ hr{
     gap: 1em;
 }
 
-.services-grid img{
-    grid-column: 1 / -1;
-    max-width: 100%;
-}
-
 .services-col-1{
     grid-column: 1 / 2;
 }
@@ -309,6 +308,15 @@ hr{
     border-radius: 8px;
     box-shadow: 0 0 0.25em 0.1em rgba(112, 32, 130, 0.2);
     padding: 6%;
+}
+
+#services-img{
+    grid-column: 1 / -1;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
 }
 
 .caps-h3{
@@ -384,4 +392,8 @@ hr{
     background-color: #575294;
     color: #ffffff;
     margin: 5%;
+}
+
+.button:focus{
+    border: dashed 4px #00274C;
 }
