@@ -537,6 +537,10 @@ hr{
         text-align: center;
     }
 
+    #textblock-404 p, #textblock-404 a{
+        font-family: Helvetica, sans-serif;
+    }
+
     #textblock-404{
         margin: 10% 0;
         display: flex;
@@ -777,5 +781,16 @@ hr{
   .reserved-spaces .button{
     margin: 2% 0 0 0;
   }
+
+  #space-type:focus, #library:focus{
+    outline: #00274C 3px dashed;
+  }
+
+  #submit-btn:focus{
+    background-color: #ffffff;
+    color: #000000;
+    outline: #575294 3px dashed;
+  }
+  
 
 }
