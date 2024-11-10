@@ -13,14 +13,16 @@
         <nav>
             <a href="index.html"><img class="nav-logo" src="images/Block_M-Hex.jpg" alt="University of Michigan 'M' Logo"></a>
             <ul>
-                <li class="active"><a href = "index.html">Home</a></li>
-                <li><a href="caps.html">CAPS</a></li>
-                <li><a href="study_spaces.html">Study Spaces</a></li>
-                <li><a href="food_pantry.html">Food Pantry</a></li>
+                <li class="active" onclick="navIndex()"><a href = "index.html">Home</a></li>
+                <li onclick="goWellness()"><a href="caps.html">CAPS</a></li>
+                <li onclick="goStudy()"><a href="study_spaces.html">Study Spaces</a></li>
+                <li onclick="goFood()"><a href="food_pantry.html">Food Pantry</a></li>
             </ul>
         </nav>
+        <section class="header">
         <h1 class="index-title">Student Success Portal</h1>
-        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="photo of the back of a student wearing a UMSI backpacking walking on campus">
+            <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="photo of the back of a student wearing a UMSI backpacking walking on campus">
+        </section>
 
     </header>
     <main id="main">
@@ -29,26 +31,26 @@
             <p>Your Comprehensive Guide to Resources for Graduate School Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
             <ol>
-                <li><a href="#wellness">Mental health services</a></li>
-                <li><a href="#study">Where to study on campus</a></li>
-                <li><a href="#food">Resources for essential food and goods</a></li>
+                <li id="wellness-button" onclick=wellnessHighlight()><a href="#wellness">Mental health services</a></li>
+                <li id="study-button" onclick=studyHighlight()><a href="#study">Where to study on campus</a></li>
+                <li id="food-button" onclick=foodHighlight()><a href="#food">Resources for essential food and goods</a></li>
             </ol>
         </section>
 
-        <section class="index-section" id="wellness">
-            <h2><a href="caps.html">Mental health services</a></h2>
-            <p>As a student at University of Michigan, you can get access to mental health services through CAPS (Counseling and Psychological Services). Whether you need immediate, emergency help or seek general counseling, CAPS has options for you.</p>
-        </section>
+            <section class="index-section" id="wellness" onclick=goWellness()>
+                <h2><a id="wellness-active" href="caps.html">Mental health services</a></h2>
+                <p>As a student at University of Michigan, you can get access to mental health services through CAPS (Counseling and Psychological Services). Whether you need immediate, emergency help or seek general counseling, CAPS has options for you.</p>
+            </section>
 
-        <section class="index-section" id="study">
-            <h2><a href="study_spaces.html">Where to study on campus</a></h2>
-            <p>Overwhelmed with the number of buildings on campus? We have you covered with options for quiet studying alone, collaborative sessions, and reserving rooms to make sure you have a seat!</p>
-        </section>
+            <section class="index-section" id="study" onclick=goStudy()>
+                <h2><a href="study_spaces.html">Where to study on campus</a></h2>
+                <p>Overwhelmed with the number of buildings on campus? We have you covered with options for quiet studying alone, collaborative sessions, and reserving rooms to make sure you have a seat!</p>
+            </section>
 
-        <section class="index-section" id="food">
-            <h2><a href="food_pantry.html">Resources for essential food and goods</a></h2>
-            <p>The university Maize & Blue Cupboard provides equitable access to food and daily necessities. Learn more about how to get access to the pantry, donate excess goods, or volunteer your time on the corresponding page.</p>
-        </section>
+            <section class="index-section" id="food" onclick=goFood()>
+                <h2><a href="food_pantry.html">Resources for essential food and goods</a></h2>
+                <p>The university Maize & Blue Cupboard provides equitable access to food and daily necessities. Learn more about how to get access to the pantry, donate excess goods, or volunteer your time on the corresponding page.</p>
+            </section>
 
     </main>
     <footer>
@@ -56,7 +58,9 @@
         <div>
             <p><a href="https://umich.edu/">University of Michigan</a> | <a href="https://www.google.com/maps/place/University+of+Michigan/@42.2771449,-83.7430726,17z/data=!3m1!4b1!4m6!3m5!1s0x883cae38e7de1701:0x5ba14e5178e997e3!8m2!3d42.277145!4d-83.7382071!16s%2Fg%2F1hjh47gfn?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">Visit Us</a></p>
             <p class="footer-p">500 S. State Street, Ann Arbor, MI 48109 USA</p>
+            <p>© Copyrights <span id="year"></span> by Carmen Luo. All rights reserved.</p>
         </div>
     </footer>
+<script src="js/script.js"></script>
 </body>
 </html>

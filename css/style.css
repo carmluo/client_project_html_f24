@@ -397,3 +397,385 @@ hr{
 .button:focus{
     border: dashed 4px #00274C;
 }
+
+#caps-header-img{
+    display: none;
+}
+
+#study-header-img{
+    display: none;
+}
+
+#food-header-img{
+    display: none;
+}
+
+#study-filter{
+    display: none;
+}
+
+@media screen and (min-width: 900px){
+    /* start of nav styling */
+    /* switch nav to horizontal with flex */
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li{
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        color: #000000;
+        /* border: #00274C 3px solid; */
+        border-radius: 20px;
+    }
+
+    li.active{
+        background-color: #00274C;
+        color: #ffffff;
+    }
+
+    nav{
+        display: flex;
+        margin: 2% 2% 0 2%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-logo{
+        all: unset;
+        width: 50%;
+        padding: 1rem;
+    }
+
+    nav li:hover{
+        outline: #00274C 2px solid;
+    }
+    /* end of nav styling */
+
+    /* updating footer style */
+    footer {
+        grid-template-columns: 10% auto;
+    }
+
+    /* page header font size */
+    h1{
+        font-size: 3rem;
+        text-align: start;
+    }
+
+    /* home page header section */
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 0;
+    }
+
+    .header img{
+        padding: 0;
+    }
+
+    main>section:first-child{
+        all: unset;
+        text-align: start;
+        max-width: 75%;
+        align-self: center;
+        flex-basis: 100%;
+    }
+
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        /* flex-direction: column; */
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    p{
+        font-size: 1.25em;
+    }
+
+    /* three 'sections' in home page */
+    .index-section{
+        flex-basis: 30%;
+        margin: 3% 1.5%;
+        padding: 2%;
+    }
+
+    .index-section h2>a{
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    .index-section h2{
+        text-align: center;
+        line-height: 90%;
+    }
+
+    .index-section:hover{
+        background-color: rgba(155, 154, 109, 0.25)
+    }
+
+    /* styling index page buttons */
+    .welcome ol{
+        display: none;
+    }
+
+    /* styling 404 page */
+    #page-404{
+        all:unset;
+        background-image: url("../images/404bg.png");
+        background-position: center top;
+        /* text-align: center; */
+    }
+
+    #textblock-404 h1{
+        text-align: center;
+    }
+
+    #textblock-404{
+        margin: 10% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #00274C;
+    }
+
+    #textblock-404 p{
+        font-size: 2rem;
+        padding: 0 0 3% 0;
+    }
+
+    #textblock-404 a{
+        font-size: 1.5rem;
+        background-color: #FFCB05;
+        padding: 2%;
+        border-radius: 24px;
+        text-decoration: none;
+    }
+
+    #textblock-404 a:hover{
+        background-color:#00274C;
+        color: #ffffff;
+        text-decoration: underline;
+        animation: wiggle 2s linear 1;
+    }
+
+    /* button wiggle animation taken from: https://blog.hubspot.com/website/css-animation-examples */
+    @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-5deg);
+    }
+    20% {
+      transform: rotateZ(3deg);
+    }
+    25% {
+      transform: rotateZ(-5deg);
+    }
+    30% {
+      transform: rotateZ(2deg);
+    }
+    35% {
+      transform: rotateZ(-2deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    /* styles to apply if a user's device settings are set to reduced motion */
+    #textblock-404 a:hover{
+        animation: none;
+    }
+  }
+
+  /* styling caps page */
+  #caps-header-img{
+    display: inline;
+  }
+
+  #caps-main>section:first-child{
+    max-width: 63%
+  }
+
+  .caps-h3{
+    margin: 0 0 3% 0;
+    text-align: center;
+  }
+
+  .services-grid .button{
+    margin: 0;
+    max-width: 40%;
+    align-self: start;
+    margin: 2% 0 0 0;
+  }
+
+  .services-grid .button:hover{
+    background-color: #ffffff;
+    outline: #702082 2px solid;
+    color: #000000;
+  }
+
+  .services-grid li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h4{
+    font-size: 1.25em;
+  }
+
+  /* styling food pantry page */
+  #food-header-img{
+    display: inline;
+    width: 100%;
+  }
+
+  #food-main>section:first-child{
+    max-width: 72%;
+  }
+
+  .pantry-h3{
+    margin: 0;
+    text-align: center;
+    order: 1;
+  }
+
+  .provide-grid{
+    display: flex;
+    align-items: flex-start;
+    order: 3;
+  }
+
+  .provide-grid>div{
+    padding: 8px;
+  }
+
+  hr{
+    all: unset;
+  }
+
+  .food-content>hr, .donating-grid>hr{
+    display: block;
+    height: 0.5em;
+    border: 0;
+    border-top: 2px solid #00B2A9;
+    margin: 0.5em 8em;
+    padding: 0;
+    order: 2;
+    width: 10%;
+    align-self: center;
+  }
+
+  section.food-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .donating-grid .button{
+    margin: 0;
+    max-width: 40%;
+    align-self: start;
+    margin: 2% 0 0 0;
+  }
+
+  #maize-shelf{
+    object-fit: cover;
+    max-height: 250px;
+    width: 100%;
+    object-position: 0 35%;
+  }
+
+  #maize-basket{
+    max-height: 500px;
+    object-fit: cover;
+    object-position: 0 40%;
+    padding: 0 0 3% 0;
+  }
+
+  /* styling buttons in food pantry */
+  #food-main .button:hover{
+    background-color: #ffffff;
+    outline: #00B2A9 2px solid;
+    color: #000000;
+  }
+
+  .donating-grid h3{
+    padding: 0;
+  }
+  /* end of food pantry styling */
+
+  /* styling study spaces page */
+  #study-main>section:first-child{
+    max-width: 72%;
+  }
+
+  #study-header-img{
+    display: inline;
+  }
+
+  .quiet-spaces, .collab-spaces, .reserved-spaces{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 3% auto;
+    flex-basis: 90%;
+    padding: 3% 5%;
+  }
+
+  #study-filter{
+    display: inline-block;
+    font-size: 1.25em;
+    width: 100%;
+  }
+
+  #study-filter>h2{
+    font-size: 1.25em;
+    color: #575294;
+  }
+
+  #study-filter>span{
+    display: block;
+  }
+
+  .submit{
+    padding: 8px 16px;
+    background-color: #575294;
+    color: #ffffff;
+    border-radius: 8px;
+    margin: 8px 0 0 0;
+  }
+
+  .submit:hover, .reserved-spaces .button:hover{
+    background-color: #ffffff;
+    outline: #575294 2px solid;
+    color: #000000;
+  }
+
+  #study-filter>label{
+    line-height: 1.5;
+    font-weight: bold;
+    color: #575294;
+  }
+
+  #study-filter>select{
+    outline: #575294 1px solid;
+    padding: 1%;
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .reserved-spaces .button{
+    margin: 2% 0 0 0;
+  }
+
+}

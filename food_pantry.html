@@ -10,22 +10,25 @@
 </head>
 
 <body id="food-pantry-bg">
-    <a id="skip" href="#main">Skip to Main Content</a>
+    <a id="skip" href="#food-main">Skip to Main Content</a>
     <header>
         <nav>
             <a href="index.html"><img class="nav-logo" src="images/Block_M-Hex.jpg"
                     alt="University of Michigan 'M' Logo"></a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="caps.html">CAPS</a></li>
-                <li><a href="study_spaces.html">Study Spaces</a></li>
-                <li class="active"><a href="food_pantry.html">Food Pantry</a></li>
+                <li onclick="navIndex()"><a href = "index.html">Home</a></li>
+                <li onclick="goWellness()"><a href="caps.html">CAPS</a></li>
+                <li onclick="goStudy()"><a href="study_spaces.html">Study Spaces</a></li>
+                <li class="active" onclick="goFood()"><a href="food_pantry.html">Food Pantry</a></li>
             </ul>
         </nav>
-        <h1>Maize and Blue Cupboard</h1>
+        <section class="header">
+            <h1>Maize and Blue Cupboard</h1>
+            <img id="food-header-img" src="images/food-pantry-home.png" alt="fridge inside of Maize and Blue Cupboard">
+        </section>
     </header>
 
-    <main id="main">
+    <main id="food-main">
         <section>
             <h2>Food Pantry at University of Michigan</h2>
             <p>To ensure members of the University of Michigan community—whether on a tight budget or physically
@@ -33,9 +36,10 @@
                 nourishing food </p>
         </section>
 
-        <section>
+        <section class="food-content">
             <h3 class="pantry-h3">What we provide</h3>
-            <img src="images/maize_and_blue_basket.png" alt="top-down photo of a basket of food">
+            <hr>
+            <img id="maize-basket" src="images/maize_and_blue_basket.png" alt="top-down photo of a basket of food">
             <div class="provide-grid">
                 <div class="food-col-1">
                     <h4>Food</h4>
@@ -68,13 +72,13 @@
             </div>
         </section>
         <section class="donating-grid">
-            <h3>Help out Maize and Blue Cupboard</h3>
+            <h3 class="pantry-h3">Help out Maize and Blue Cupboard</h3>
             <div class="donating-col-1">
                 <h4><span class="pantry-bold">Goods</span></h4>
                 <p>Consider donating produce, canned and dry goods, cookware and personal care items. To ensure the health
                     and safety of students are met, we only accept items that comply with federal, state, and local food
                     safety regulations.</p>
-                <img src="images/maize_and_blue_shelf.png" alt="photo of a dry goods shelf at the food pantry">
+                <img id="maize-shelf" src="images/maize_and_blue_shelf.png" alt="photo of a dry goods shelf at the food pantry">
             </div>
             <div class="donating-col-2">
                 <h4><span class="pantry-bold">Time</span></h4>
@@ -93,9 +97,10 @@
         <div>
             <p><a href="https://mbc.studentlife.umich.edu">Maize & Blue Cupboard</a> | <a href="https://maps.app.goo.gl/RFxcgc4oY9iDkLKs9">Visit Us</a></p>
             <p class="footer-p">420 S State St, Ann Arbor, MI 48109</p>
+            <p>© Copyrights <span id="year"></span> by Carmen Luo. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -8,23 +8,26 @@
     <title>Counseling and Psychological Services (CAPS)</title>
 </head>
 <body id="caps-bg">
-    <a id="skip" href = "#main">Skip to Main Content</a>
+    <a id="skip" href = "#caps-main">Skip to Main Content</a>
     <header>
         <nav>
             <a href="index.html"><img class="nav-logo" src="images/Block_M-Hex.jpg" alt="University of Michigan 'M' Logo"></a>
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li class="active"><a href = "caps.html">CAPS</a></li>
-                <li><a href="study_spaces.html">Study Spaces</a></li>
-                <li><a href="food_pantry.html">Food Pantry</a></li>
+                <li onclick="navIndex()"><a href = "index.html">Home</a></li>
+                <li class="active" onclick="goWellness()"><a href="caps.html">CAPS</a></li>
+                <li onclick="goStudy()"><a href="study_spaces.html">Study Spaces</a></li>
+                <li onclick="goFood()"><a href="food_pantry.html">Food Pantry</a></li>
             </ul>
         </nav>
-        <h1>Counseling and Psychological Services (CAPS)</h1>
+        <section class="header">
+            <h1>Counseling and Psychological Services (CAPS)</h1>
+            <img id="caps-header-img" src="images/caps-home.jpg" alt="Students play frisbee outside of the UMMA">
+        </section>
 
     </header>
 
-    <main id="main">
-        <section>
+    <main id="caps-main">
+        <section class="caps-intro">
             <h2>What is CAPS?</h2>
             <p>Counseling and Psychological Services (CAPS) provides a range of clinical, preventative, and training services consistent with the practices and standards of a nationally accredited university counseling center. CAPS is committed to creating a safe and supportive environment based on our multicultural, multi-disciplinary and multi-theoretical values and practices that allow our sectionerse student body to access care, to receive high quality services, and to take positive pathways to mental health. </p>
             <p>All students are welcome to seek services at CAPS, whether you need emergency help or simply want to speak with one of our counselors</p>
@@ -84,9 +87,10 @@
                 Michigan Union, Suite 4079,
                 530 South State Street,
                 Ann Arbor, MI 48109</p>
+            <p>© Copyrights <span id="year"></span> by Carmen Luo. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
